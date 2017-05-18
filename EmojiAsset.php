@@ -1,24 +1,34 @@
 <?php
-namespace yangshihe\emoji;
+/**
+ * EmojiAsset
+ *
+ *@package vendor.tangniyuqi.yii2-emoji
+ *@author tangming <tangniyuqi@163.com>
+ *@copyright DNA <http://www.Noooya.com/>
+ *@version 1.0.0
+ *@since 2017-05-18 Create
+ *@todo N/A
+ */
+namespace tangniyuqi\emoji;
 
 use Yii;
-use yii\web\AssetBundle;
 
-/**
- * @author yangshihe@qq.com
- * @since 1.0
- */
-
-class EmojiAsset extends AssetBundle
+class EmojiAsset extends \yii\web\AssetBundle
 {
-
+	/**
+     * @inheritdoc
+     */
 	public $css = [
         'e.css',
 	];
 
+	/**
+     * @inheritdoc
+     */
 	public function init()
     {
         parent::init();
-        $this->sourcePath = dirname(__FILE__) . DIRECTORY_SEPARATOR . 'lib';
+
+        $this->sourcePath = dirname(__FILE__).DIRECTORY_SEPARATOR.'lib';
     }
 }
